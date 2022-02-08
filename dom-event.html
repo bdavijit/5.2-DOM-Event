@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <!-- onclick -->
+    <h1 onclick="console.log('h1 is clicked')">Event Niye clickBaji</h1>
+    <button onclick="alert(7)">click me</button>
+    <button onclick="console.log(7)">click me</button>
+
+    <button onclick="document.body.style.backgroundColor='yellow'">
+      click me: back yellow
+    </button>
+    <button onclick="makeRed()">click me: back red</button>
+    <button id="make_blue_button">click me: back blue</button>
+    <button id="make_green_button">click me: back green</button>
+    <button id="make_gold_button">click me: back gold</button>
+    <button id="make_pink_button">click me: back pink</button>
+    <button id="make_red_button">click me: back red</button>
+    <script src="js/event.js"></script>
+
+    <script>
+      const pinkButton = document.getElementById("make_pink_button");
+      pinkButton.addEventListener("click", function () {
+        document.body.style.backgroundColor = "#8B008B";
+      })
+    </script>
+  </body>
+</html>

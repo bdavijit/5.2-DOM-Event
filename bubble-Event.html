@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buble Event</title>
+  </head>
+  <body>
+    
+<section id="sectionContaner">
+    <p>Buble Event</p>
+    <ul id="contaner">
+        <li class="child">Lorem ipsum dolor sit.</li>
+        <li id="second-item" class="child">Architecto saepe tenetur odio.</li>
+        <li class="child">Molestiae veritatis delectus laborum!</li>
+        <li class="child">Eius natus enim eaque!</li>
+        <li class="child">Quis vel suscipit commodi.</li>
+        <li class="child">Voluptatem eum iure corporis.</li>
+      </ul>
+</section>
+
+    <script>
+      const Second_Item = document.getElementById("second-item");
+      const contaner_Box = document.getElementById("contaner");
+      const section_contaner = document.getElementById("sectionContaner");
+      
+
+      Second_Item.addEventListener("click", function (event) {
+        console.log("second item clicked");
+        event.stopPropagation();
+      });
+      Second_Item.addEventListener("click", function (event) {
+        console.log("second item clicked 2");
+        //EI ID ER GULAO STOP HOBE
+        event.stopImmediatePropagation();
+        
+      });
+      Second_Item.addEventListener("click", function (event) {
+        console.log("second item clicked 3");
+        
+      });
+      contaner_Box.addEventListener("click", function (event) {
+        console.log("ul clicked");
+        
+      });
+      section_contaner.addEventListener("click", function (event) {
+        console.log("section clicked");
+        
+      });
+    </script>
+  </body>
+</html>
